@@ -1,9 +1,9 @@
 package sources.hex;
 
 public class Plateau {
-	private final static int CROIX = -1;
-	private final static int ROND = 1;
-	private final static int VIDE = 0;
+	// private final static int CROIX = -1;
+	// private final static int ROND = 1;
+	// private final static int VIDE = 0;
 	private final static int TAILLE_MAX = 26;
 	
 	private int[][] t;
@@ -11,7 +11,10 @@ public class Plateau {
 	public Plateau(int taille) {
 		assert taille > 0 && taille <= TAILLE_MAX;
 		
-		t = new int [taille][taille];
+		t = new Pion [taille][taille];
+		for (int lig = 0; lig < taille(); ++lig)
+			for (int col = 0; col<taille(); ++col)
+				t[col][lig] = Pion.Vide;
 	}
 	
 	public int taille() {

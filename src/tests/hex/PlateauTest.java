@@ -21,6 +21,30 @@ class PlateauTest {
 				"2  . . . .\n" + 
 				"3   . . . .\n" + 
 				"4    . . . .\n", p.toString());
-		}
+
+		//Jouer un coup en B2
+		assertEquals('X', p.getCase("B2"));
+
+
+		
+	}
 
 }
+
+
+// dans src sources hex creer pion.java
+
+// package sources.hex;
+
+// public enum Pion {
+// 	Croix('X'),Rond('O'),Vide('.');
+// 	private char symbole;
+// 	Pion (char symbole){
+// 		this.symbole = symbole;
+// 	}
+	
+// 	@Override
+// 	public String toString() {
+// 		return ""+symbole;
+// 	}
+// }
