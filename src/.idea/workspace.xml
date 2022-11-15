@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="035285d6-4874-4159-b4a3-b5827983bccf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hex-Java.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hex/Plateau.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/hex/PlateauTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/hex/PlateauTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/hex/Plateau.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/hex/Plateau.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
