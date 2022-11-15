@@ -7,7 +7,7 @@ public class Plateau {
 	private final static int TAILLE_MAX = 26;
 	
 	private int[][] t;
-
+fgf
 	public Plateau(int taille) {
 		assert taille > 0 && taille <= TAILLE_MAX;
 		
