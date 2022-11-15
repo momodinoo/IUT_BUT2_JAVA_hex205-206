@@ -15,7 +15,7 @@ public class Plateau {
 	}
 	
 	public int taille() {
-		return t.length;
+		return t.length;GF
 	}
 	
 	private char symbole (int val) {
