@@ -28,6 +28,17 @@ public class Plateau {
 		return s;
 	}
 	
+	public String[] decouper(int taille,String position) {
+		assert position.length() == taille* taille;
+		String [] lignes= new String[taille];
+		
+		for (int i=0;i<taille;++i) {
+			lignes[i]=position.substring(i*taille,(i+1)*taille);
+		}
+		
+		return lignes;
+	}
+	
 	@Override
 	public String toString() {
 		String s = "";

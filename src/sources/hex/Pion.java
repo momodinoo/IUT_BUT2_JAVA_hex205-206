@@ -11,4 +11,14 @@ public enum Pion {
 	public String toString() {
 		return ""+symbole;
 	}
+	
+	//retourne le pion correspondant à c
+	public static Pion get(char c) throws Exception{
+		for(Pion p : Pion.values()) {
+			if (p.symbole==c){
+				return p;
+			}
+		}
+		throw new Exception("Caractère inconnu");
+	}
 }

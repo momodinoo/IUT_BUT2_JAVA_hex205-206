@@ -28,6 +28,17 @@ class PlateauTest {
 		
 		// assertEquals(Pion.Croix, p.getCase("B2"));
 		
+		
+		String pos1="....XOXXOO.OX...";
+		// Plateau p1 = new Plateau(taille,"....XOXXOO.OX...");
+		
+		String[] lignes = p.decouper(taille, pos1);
+		
+		String[] lignes_rep = {"....","XOXX","OO.O","X..."};
+		for (int i =0; i<taille;++i) {
+			assertEquals(lignes_rep[i],lignes[i]);
+			System.out.println(lignes_rep[i]);
+		}
 	}
 
 }
