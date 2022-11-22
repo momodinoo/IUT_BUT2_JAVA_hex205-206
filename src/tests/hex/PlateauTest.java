@@ -37,8 +37,10 @@ class PlateauTest {
 		String[] lignes_rep = {"....","XOXX","OO.O","X..."};
 		for (int i =0; i<taille;++i) {
 			assertEquals(lignes_rep[i],lignes[i]);
-			System.out.println(lignes_rep[i]);
 		}
+		
+		Plateau p1= new Plateau(taille,pos1);
+		System.out.println(p1);
 	}
 
 }

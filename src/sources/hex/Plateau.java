@@ -6,7 +6,7 @@ public class Plateau {
 	
 	private Pion[][] t;
 
-	public Plateau(int taille) {
+	public Plateau(int taille) { // crée un plateau vide
 		assert taille > 0 && taille <= TAILLE_MAX;
 		
 		t = new Pion [taille][taille];
@@ -14,6 +14,17 @@ public class Plateau {
 		for (int lig = 0; lig < taille(); ++lig)
 			for (int col = 0; col < taille(); ++col)
 				t[col][lig] = Pion.Vide;
+	}
+	
+	public Plateau(int taille, String pos) {//crée un plateau à l'aide de pos
+		assert taille > 0 && taille <= TAILLE_MAX;
+		t = new Pion [taille][taille];
+		
+		String[] lignes = decouper(taille, pos);
+		
+		for (int lig = 0; lig < taille(); ++lig)
+			for (int col = 0; col < taille(); ++col)
+				t[col][lig] = Pion.get(lignes[lig].charAt(col));
 	}
 	
 	public int taille() {
