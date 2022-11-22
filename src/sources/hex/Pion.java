@@ -13,12 +13,13 @@ public enum Pion {
 	}
 	
 	//retourne le pion correspondant à c
-	public static Pion get(char c) throws Exception{
+	public static Pion get(char c){
 		for(Pion p : Pion.values()) {
 			if (p.symbole==c){
 				return p;
 			}
 		}
-		throw new Exception("Caractère inconnu");
+		throw new IllegalArgumentException
+			("Symbole inconnu : "+c);
 	}
 }
