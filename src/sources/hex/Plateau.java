@@ -27,6 +27,7 @@ public class Plateau {
 			s+= " ";
 		return s;
 	}
+	
 	@Override
 	public String toString() {
 		String s = "";
@@ -41,9 +42,5 @@ public class Plateau {
 		}
 		return s;
 	}
-
-
-
-
 
 }

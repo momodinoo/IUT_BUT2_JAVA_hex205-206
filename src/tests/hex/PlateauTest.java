@@ -25,7 +25,8 @@ class PlateauTest {
 		
 	
 		// jouer un coup en B2
-		//assertEquals(Pion.Croix, p.getCase("B2"));
+		
+		// assertEquals(Pion.Croix, p.getCase("B2"));
 		
 	}
 
