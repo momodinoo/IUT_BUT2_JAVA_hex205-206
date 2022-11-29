@@ -3,6 +3,7 @@ package sources.hex;
 public class Plateau {
 	private final static int TAILLE_MAX = 26;
 	private final static int NB_JOUEURS = 2;
+	private final static char COL_0 = 'A';
 	
 	private Pion[][] t;
 
@@ -63,6 +64,10 @@ public class Plateau {
 			s+='\n';
 		}
 		return s;
+	}
+	
+	private int getColonne(String coord) {
+		return coord.charAt(0) - COL_0;
 	}
 
 }

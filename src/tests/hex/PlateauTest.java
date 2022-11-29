@@ -21,16 +21,13 @@ class PlateauTest {
 				"1 . . . .\n" + 
 				"2  . . . .\n" + 
 				"3   . . . .\n" + 
-				"4    . . . .\n", p.toString());
-		
+				"4    . . . .\n", p.toString());	
 	
 		// jouer un coup en B2
 		
 		// assertEquals(Pion.Croix, p.getCase("B2"));
-		
-		
+			
 		String pos1="....XOXXOO.OX...";
-		// Plateau p1 = new Plateau(taille,"....XOXXOO.OX...");
 		
 		String[] lignes = p.decouper(taille, pos1);
 		
