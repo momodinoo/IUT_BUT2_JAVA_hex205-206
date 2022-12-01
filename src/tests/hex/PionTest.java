@@ -9,14 +9,21 @@ import sources.hex.Pion;
 class PionTest {
 
 	@Test
-	void test() throws Exception {
+	void test() {
+		// teste l'attribution des valeurs du enum
 		assertEquals("X",Pion.Croix.toString());
 		assertEquals("O",Pion.Rond.toString());
 		assertEquals(".",Pion.Vide.toString());
 		
-		assertTrue(Pion.get('X') == Pion.Croix);
-		assertTrue(Pion.get('O') == Pion.Rond);
-		assertTrue(Pion.get('.') == Pion.Vide);
-		}
+		assertTrue(Pion.Croix == Pion.get('X'));
+		assertTrue(Pion.Rond == Pion.get('O'));
+		assertTrue(Pion.Vide == Pion.get('.'));
+		
+		assertThrows(IllegalArgumentException.class,
+				() -> {
+					Pion.get('*');
+				}
+				);
+	}
 
 }
