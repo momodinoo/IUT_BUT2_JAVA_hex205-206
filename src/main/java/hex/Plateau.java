@@ -1,4 +1,4 @@
-package sources.hex;
+package main.java.hex;
 
 public class Plateau {
 	private final static int TAILLE_MAX = 26;
@@ -138,6 +138,11 @@ public class Plateau {
 					(i+1)*taille);
 		return lignes;
 		
+	}
+
+	public boolean estGagne() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 
