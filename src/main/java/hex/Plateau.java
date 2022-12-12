@@ -1,67 +1,14 @@
 package main.java.hex;
 
 public class Plateau {
-	private final static int TAILLE_MAX = 26;
+	private final static int TAILLE_MAX = 9;
 	private final static int NB_JOUEURS = 2;
 	private final static int PREMIERE_COLONNE = 'A';
 	private final static int PREMIERE_LIGNE = '1';
 	
-	// premier joueur relie la première et la dernière ligne
-	// deuxième joueur relie la première et la dernière colonne
-	
 	private Pion[][] t;
 	private int joueur = 0; // prochain à jouer
 	
-	private void suivant() {
-		joueur = (joueur +1) % NB_JOUEURS;
-	}
-	
-	public void jouer(String coord) {
-		// joue un coup pour un joueur selon coord
-		assert estValide(coord);
-		assert getCase(coord) == Pion.Vide;
-		Pion pion = Pion.values()[joueur];
-		int col = getColonne(coord);
-		int lig = getLigne(coord);
-		t[col][lig] = pion;
-		suivant(); // prépare le coup pour le joueur suivant
-	}
-	
-	public static int getTaille(String pos) {
-		int taille = (int) Math.sqrt(pos.length());
-		assert taille * taille == pos.length();
-		return taille;
-	}
-
-	public boolean estValide(String coord) {
-		if (coord.length() !=2)
-			return false;
-		int col = getColonne(coord);
-		int lig = getLigne(coord);
-		System.out.println(coord + " "+ col+ " "+ lig); // test
-		if (col <0 || col >= taille())
-			return false;
-		if (lig <0 || lig >= taille())
-			return false;
-		return true;
-	}
-	
-	public Pion getCase(String coord) {
-		// renvoie le contenu de la case / ex : "B2" -> contenu de la case [1][1]
-		assert estValide(coord);
-		int col = getColonne(coord);
-		int lig = getLigne(coord);
-		return t[col][lig];
-	}
-
-	private int getColonne(String coord) {
-		return coord.charAt(0) - PREMIERE_COLONNE; // ex 'B' -'A' == 1
-	}
-	
-	private int getLigne(String coord) {
-		return coord.charAt(1) - PREMIERE_LIGNE; // ex '2' - '0' == 2
-	}
-
 	public Plateau(int taille) {
 		// init plateau vide
 		assert taille > 0 && taille <= TAILLE_MAX;
@@ -92,6 +39,69 @@ public class Plateau {
 					"position non valide");
 	}
 	
+	private void suivant() {
+		joueur = (joueur +1) % NB_JOUEURS;
+	}
+	
+	public void jouer(String coord){
+		assert estJouable(coord);
+		Pion pion = Pion.values()[joueur];
+		int col = getColonne(coord);
+		int lig = getLigne(coord);
+		t[col][lig] = pion;
+		suivant(); // prépare le coup pour le joueur suivant
+	}
+	
+	public static int getTaille(String pos) {
+		int taille = (int) Math.sqrt(pos.length());
+		assert taille * taille == pos.length();
+		return taille;
+	}
+
+	public boolean estJouable(String coord) {
+		return estValide(coord) && estVide(coord);
+	}
+	
+	public boolean estValide(String coord) {
+		if (coord.length() !=2)
+			return false;
+		int col = getColonne(coord);
+		int lig = getLigne(coord);
+		if (col <0 || col >= taille())
+			return false;
+		if (lig <0 || lig >= taille())
+			return false;
+		return true;
+	}
+	
+	public boolean estVide(String coord) {
+		int col = getColonne(coord);
+		int lig = getLigne(coord);
+		if (t[col][lig]==Pion.Vide)
+			return true;
+		return false;
+	}
+	
+	public Pion getCase(String coord) {
+		// renvoie le contenu de la case / ex : "B2" -> contenu de la case [1][1]
+		assert estValide(coord);
+		int col = getColonne(coord);
+		int lig = getLigne(coord);
+		return t[col][lig];
+	}
+
+	public static int getTailleMax() {
+		return TAILLE_MAX;
+	}
+
+	private int getColonne(String coord) {
+		return coord.charAt(0) - PREMIERE_COLONNE; // ex 'B' -'A' == 1
+	}
+	
+	private int getLigne(String coord) {
+		return coord.charAt(1) - PREMIERE_LIGNE; // ex '2' - '0' == 2
+	}
+
 	public int getNb(Pion pion) {
 		int nb = 0;
 		for (Pion [] ligne : t)
@@ -105,7 +115,6 @@ public class Plateau {
 		// taille tableau (nb de lignes/colonnes)
 		return t.length;
 	}
-	
 	
 	private String espaces(int n) {
 		// renvoie un String de n espaces

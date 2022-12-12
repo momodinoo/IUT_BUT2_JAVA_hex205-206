@@ -2,6 +2,7 @@ package main.java.joueurs;
 
 import java.util.LinkedList;
 
+import main.java.hex.IJoueur;
 import main.java.hex.Pion;
 
 public class Humain implements IJoueur{

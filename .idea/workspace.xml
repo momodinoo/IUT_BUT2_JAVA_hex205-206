@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a664f7bb-3ff5-4c18-812c-35948357367c" name="Changes" comment="" />
+    <list default="true" id="a664f7bb-3ff5-4c18-812c-35948357367c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hex/Plateau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hex/Plateau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ihm/IHM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ihm/IHM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/joueurs/Aléatoire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/joueurs/Aleatoire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/joueurs/Humain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/joueurs/Humain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/joueurs/IJoueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hex/IJoueur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/java/hex/PlateauTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/java/hex/PlateauTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,14 +26,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/bencal1803/Desktop/Hex-Java/src&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/bencal1803/Desktop/Hex-Java/src",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "discord-application"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Unnamed" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="Hex-Java" />
@@ -45,6 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668517792423</updated>
       <workItem from="1669087254979" duration="150000" />
+      <workItem from="1670796727935" duration="166000" />
     </task>
     <servers />
   </component>
