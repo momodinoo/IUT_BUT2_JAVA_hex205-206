@@ -8,6 +8,7 @@ public class Plateau {
 	
 	private Pion[][] t;
 	private int joueur = 0; // prochain à jouer
+	private Chemin chemin;
 	
 	public Plateau(int taille) {
 		// init plateau vide
@@ -17,28 +18,17 @@ public class Plateau {
 		for (int lig = 0; lig < taille(); ++lig)
 			for (int col = 0; col < taille(); ++col)
 				t[col][lig] = Pion.Vide;
+		
+		chemin = new Chemin(t);
+	}
+
+	public Chemin getChemin() {
+		return chemin;
 	}
 	
-	public Plateau(int taille, String pos) {
-		// init plateau grâce à pos
-		assert taille > 0 && taille <= TAILLE_MAX;
-		t = new Pion [taille][taille];
-		
-		String[] lignes = decouper(pos);
-		
-		for (int lig = 0; lig < taille(); ++lig)
-			for (int col = 0; col < taille(); ++col)
-				t[col][lig] = 
-				  Pion.get(lignes[lig].charAt(col));
-		
-		// si la pos est pas entre 0 et 2, c'est invalide
-		if (getNb(Pion.Croix) != getNb(Pion.Rond) &&
-			getNb(Pion.Croix) != (getNb(Pion.Rond)+1) &&
-					getNb(Pion.Croix) != (getNb(Pion.Rond)-1))
-			throw new IllegalArgumentException(
-					"position non valide");
+	public void updateChemin() {
+		chemin.setMatrice(t);
 	}
-	
 	private void suivant() {
 		joueur = (joueur +1) % NB_JOUEURS;
 	}
@@ -102,15 +92,6 @@ public class Plateau {
 		return coord.charAt(1) - PREMIERE_LIGNE; // ex '2' - '0' == 2
 	}
 
-	public int getNb(Pion pion) {
-		int nb = 0;
-		for (Pion [] ligne : t)
-			for (Pion p : ligne)
-				if (p == pion)
-					++nb;
-		return nb;
-	}
-
 	public int taille() {
 		// taille tableau (nb de lignes/colonnes)
 		return t.length;
@@ -123,6 +104,7 @@ public class Plateau {
 			s+= " ";
 		return s;
 	}
+	
 	@Override
 	public String toString() {
 		String s = "";
@@ -138,24 +120,16 @@ public class Plateau {
 		return s;
 	}
 
-	public static String[] decouper(String pos) {
-		// découpe un string entier en string de string (pour init t)
-		int taille = getTaille(pos);
-		String[] lignes = new String[taille];
-		for (int i = 0; i <taille; ++i)
-			lignes[i] = pos.substring(i*taille,
-					(i+1)*taille);
-		return lignes;
-		
+	public boolean estGagne() {
+		return (aCheminHB() /*|| aCheminGD()*/);
 	}
 
-	public boolean estGagne() {
-		// TODO Auto-generated method stub
+	public boolean aCheminHB() {
+		return chemin.aCheminHB();
+	}
+		
+	public boolean aCheminGD() {
+		//return chemin.aCheminGD();
 		return false;
 	}
-
-
-
-
-
 }

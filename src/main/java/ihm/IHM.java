@@ -91,11 +91,19 @@ public class IHM {
             }
 	    	p.jouer(coup_J2);
 	    	System.out.println(p);
+	    	
+	    	p.updateChemin();
+			
+			System.out.println("haut bas : " + p.aCheminHB()); // à enlever
+			System.out.println("gauche droite :" + p.aCheminGD()); // à enlever
+	    	
+	    	
 		}
 		sc.close();
 		
 		// Affichage des gagnants
-		// à faire
+		if(p.aCheminHB()) System.out.println("Le joueur " + J1.getNom() + " a gagné !\n");
+		if(p.aCheminGD()) System.out.println("Le joueur " + J2.getNom() + " a gagné !\n");
 		
 		System.out.println("Merci d'avoir joué à Hex !");
 	}
@@ -127,11 +135,18 @@ public class IHM {
 	    	System.out.println(IA.getNom() + " (IA) a joué.\n");
 			p.jouer(IA.choisirCoup(p));
 			System.out.println(p);
+			
+			p.updateChemin();
+			
+			System.out.println("haut bas : " + p.aCheminHB()); // à enlever 
+			System.out.println("gauche droite :" + p.aCheminGD()); // à enlever
 		}
 		sc.close();
 		
 		// Affichage des gagnants
-		// à faire
+		if(p.aCheminHB()) System.out.println("Le joueur " + J.getNom() + " a gagné !\n");
+		if(p.aCheminGD()) System.out.println("L'IA " + IA.getNom() + " a gagné !\n");
+		
 		System.out.println("Merci d'avoir joué à Hex !");
 	}
 
@@ -146,10 +161,17 @@ public class IHM {
 			System.out.println(IA2.getNom() + " a joué.\n");
 			p.jouer(IA2.choisirCoup(p));
 			System.out.println(p);
+			
+			p.updateChemin();
+			
+			System.out.println("haut bas : " + p.aCheminHB()); // à enlever 
+			System.out.println("gauche droite :" + p.aCheminGD()); // à enlever
 		}
 		
 		// Affichage des gagnants
-		// à faire
+		if(p.aCheminGD()) System.out.println("L'IA 1 " + IA1.getNom() + " a gagné !\n");
+		if(p.aCheminGD()) System.out.println("L'IA 2 " + IA2.getNom() + " a gagné !\n");
+		
 		System.out.println("Merci d'avoir joué à Hex !");
 	}
 }
