@@ -129,7 +129,6 @@ public class Plateau {
 	}
 		
 	public boolean aCheminGD() {
-		//return chemin.aCheminGD();
-		return false;
+		return chemin.aCheminGD();
 	}
 }

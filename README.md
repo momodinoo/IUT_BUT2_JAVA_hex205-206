@@ -1,5 +1,5 @@
 # Projet Hex - Java <img src="https://media.giphy.com/media/WFZvB7VIXBgiz3oDXE/giphy.gif" width="40">
-### Morgane BRETON 205, Vanessa PHAM 206, Alexia BENCE 206 et Chaimae EL MATTARI 206 
+### Morgane BRETON 205, Vanessa PHAM 206, Chaimae EL MATTARI 206 et Alexia BENCE 206
 
 ---
 
@@ -8,7 +8,7 @@
     Nous avons représentés le plateau de jeu par un tableau à double dimension. <br />
     Afin de savoir si une partie est finie ou non, nous devons chercher s'il existe un chemin entre le haut et le bas de cette matrice, ou entre la gauche et la droite. <br/>
     Pour gérer cette fin de partie, avec la structure utilisée, nous n'avons pas trouvé d'autres solutions
-    que de stocker les cases visitées dans un tableau, puis d'effectuer des récursions sur les cases adjacentes (dans les 8 directions autour de la case initiale).
+    que de stocker les cases visitées dans un tableau, puis d'effectuer des récursions sur les 6 cases adjacentes.
     Cette méthode est très couteuse en complexité.
     L'idéal aurait été d'utiliser une autre structure de données pour représenter le plateau, en occurrence un disjoint-set.<br /><br />
     Au niveau de l'IHM, si le premier joueur gagne, le deuxième joueur pourra jouer encore un coup avant l'arrêt de la partie et la victoire du joueur 1
@@ -51,7 +51,7 @@ et d'utiliser des algorithmes probabilistes afin de déterminer le meilleur coup
 ---
 <h3>Bilan</h3>
 <p>
-Ce projet était très formateur, il nous a surtout aidé pour apprendre et maitriser les principes SOLID.
+Ce projet était très formateur, il nous a surtout aidé pour apprendre et maitriser les principes SOLID. <br/>
 L'utilisation d'un Disjoint-set est sans doute la notion la plus intéressante à approfondir, bien qu'il serait idéal d'implémenter
 toutes les fonctions du projet non finies abordées dans la première partie de ce rapport.
 </p>

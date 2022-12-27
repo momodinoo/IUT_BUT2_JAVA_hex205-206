@@ -1,8 +1,9 @@
 package main.java.hex;
 
 public enum Pion {
-	Croix('X'), Rond('O'), Vide('.'), Depart('D');
-	// La valeur Depart sert seulement pour la détection de chemin
+	Croix('X'), Rond('O'), Vide('.'), Depart('D'), Depart2('E');
+	// La valeur Depart sert seulement pour la détection d'un chemin de haut en bas
+	// La valeur Depart2 sert seulement pour la détection d'un chemin de gauche à droite
 	private char symbole;
 	private Pion (char symbole) {
 		this.symbole = symbole;
