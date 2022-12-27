@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import main.java.hex.Plateau;
 import main.java.joueurs.Aleatoire;
+import main.java.joueurs.Humain;
+import main.java.joueurs.Joueur;
 
 class AleatoireTest {
 
@@ -18,5 +20,11 @@ class AleatoireTest {
 		
 		Aleatoire a = new Aleatoire("IA");
 		System.out.println(a.choisirCoup(p));
+	}
+	
+	@Test
+	void tttt() {
+		Joueur j = new Humain("john");
+		System.out.println(j.getNom());
 	}
 }

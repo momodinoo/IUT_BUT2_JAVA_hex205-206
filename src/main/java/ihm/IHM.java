@@ -32,6 +32,8 @@ public class IHM {
 	    
 	    // Choix du mode de jeu et lancement de la partie
 	    
+	    System.out.println("Le premier joueur doit relier la première et la dernière ligne.");
+	    System.out.println("Le deuxième joueur doit relie la première et la dernière colonne.\n");
 	    System.out.println("Quel mode de jeu voulez-vous choisir ?\n- Joueur VS Joueur (1)\n- Joueur VS IA (2)\n- IA VS IA (3)\n");
 	    
 	    Integer mode_jeu = sc.nextInt();
@@ -93,11 +95,6 @@ public class IHM {
 	    	System.out.println(p);
 	    	
 	    	p.updateChemin();
-			
-			System.out.println("haut bas : " + p.aCheminHB()); // à enlever
-			System.out.println("gauche droite :" + p.aCheminGD()); // à enlever
-	    	
-	    	
 		}
 		sc.close();
 		
@@ -137,9 +134,6 @@ public class IHM {
 			System.out.println(p);
 			
 			p.updateChemin();
-			
-			System.out.println("haut bas : " + p.aCheminHB()); // à enlever 
-			System.out.println("gauche droite :" + p.aCheminGD()); // à enlever
 		}
 		sc.close();
 		
@@ -163,13 +157,10 @@ public class IHM {
 			System.out.println(p);
 			
 			p.updateChemin();
-			
-			System.out.println("haut bas : " + p.aCheminHB()); // à enlever 
-			System.out.println("gauche droite :" + p.aCheminGD()); // à enlever
 		}
 		
 		// Affichage des gagnants
-		if(p.aCheminGD()) System.out.println("L'IA 1 " + IA1.getNom() + " a gagné !\n");
+		if(p.aCheminHB()) System.out.println("L'IA 1 " + IA1.getNom() + " a gagné !\n");
 		if(p.aCheminGD()) System.out.println("L'IA 2 " + IA2.getNom() + " a gagné !\n");
 		
 		System.out.println("Merci d'avoir joué à Hex !");

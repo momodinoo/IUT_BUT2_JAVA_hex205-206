@@ -121,7 +121,7 @@ public class Plateau {
 	}
 
 	public boolean estGagne() {
-		return (aCheminHB() /*|| aCheminGD()*/);
+		return (aCheminHB() || aCheminGD());
 	}
 
 	public boolean aCheminHB() {

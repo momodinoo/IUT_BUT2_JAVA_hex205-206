@@ -2,18 +2,11 @@ package main.java.joueurs;
 
 import java.util.Random;
 
-import main.java.hex.IJoueur;
 import main.java.hex.Plateau;
 
-public class Aleatoire implements IJoueur{
-	private String nom;
-	
+public class Aleatoire extends Joueur{
 	public Aleatoire(String n) {
-		nom=n;
-	}
-	
-	public String getNom() {
-		return nom;
+		super(n);
 	}
 	
 	public String choisirCoup(Plateau p) {
