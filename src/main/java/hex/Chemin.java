@@ -17,7 +17,10 @@ public class Chemin {
 				matrice[lig][col] = Pion.Vide;
 		setMatrice(plateau);
 	}
-
+	
+	/*
+	 * initialise la matrice d'un Chemin à celle donnée en paramètre
+	 */
 	public void setMatrice(Pion[][] plateau){
 		for (int lig = 0; lig < taille; ++lig)
 			for (int col = 0; col < taille; ++col)
@@ -25,8 +28,7 @@ public class Chemin {
 	}
 	
 	// Methode pour verifier les bordures
-    public boolean estValide(int i, int j)
-    {
+    public boolean estValide(int i, int j){
         if (i >= 0 && i < matrice.length && j >= 0
                 && j < matrice[0].length)
             return true;
@@ -66,7 +68,7 @@ public class Chemin {
    		return cheminGD;
    	}
   
-	// Methode recursive qui renvoie true si il y a un chemin depuis i,j / condition d'arrêt pour un chemin entre le haut et le bas
+	// Methode recursive qui renvoie true si il y a un chemin depuis i,j
     public boolean aChemin(int i, int j, boolean visites[][],Pion pion)
     {
         // Verifie les bordures, si la case a bien la valeur qu'on cherche

@@ -9,6 +9,10 @@ public class Joueur implements IJoueur{
 		nom=n;
 	}
 	
+	/*
+	 * Getter du nom d'un Joueur
+	 * @return un String, le nom du joueur
+	 */
 	public String getNom() {
 		return nom;
 	}

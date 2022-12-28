@@ -9,6 +9,11 @@ public class Aleatoire extends Joueur{
 		super(n);
 	}
 	
+	/*
+	 * Choisis aléatoirement un coup à jouer
+	 * @param p, le plateau de jeu
+	 * @return un String, les coordonnées de la case à jouer
+	 */
 	public String choisirCoup(Plateau p) {
 		StringBuilder sb = new StringBuilder();
 		String coord;

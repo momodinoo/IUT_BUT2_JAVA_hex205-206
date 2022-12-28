@@ -59,7 +59,11 @@ public class IHM {
 	   }
 	    sc.close();
 	}
-
+	
+	/*
+	 * Lance une partie où 2 joueurs s'affrontent
+	 * @param p, le plateau de jeu
+	 */
 	private static void partie2Humains(Plateau p) {
 		// Enregistrement des joueurs
 		Scanner sc = new Scanner(System.in);
@@ -104,7 +108,11 @@ public class IHM {
 		
 		System.out.println("Merci d'avoir joué à Hex !");
 	}
-
+	
+	/*
+	 * Lance une partie où 1 joueur affronte une IA
+	 * @param p, le plateau de jeu
+	 */
 	private static void partie1Humain1IA(Plateau p) {
 		// Enregistrement des joueurs
 		Scanner sc = new Scanner(System.in);
@@ -143,7 +151,11 @@ public class IHM {
 		
 		System.out.println("Merci d'avoir joué à Hex !");
 	}
-
+	
+	/*
+	 * Lance une partie où 2 IA s'affrontent
+	 * @param p, le plateau de jeu
+	 */
 	private static void partie2IAs(Plateau p) {
 		Aleatoire IA1 = new Aleatoire("IA1");
 		Aleatoire IA2 = new Aleatoire("IA2");
