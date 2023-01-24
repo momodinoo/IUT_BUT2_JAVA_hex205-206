@@ -3,6 +3,8 @@
 
 ---
 
+MZ: Note 14/20 au groupe. La note de l'exo du DST ne sera prise en compte que si elle est supérieure donc cette note ne peut pas baisser.
+
 <article style="text-align: justify">
     Dans ce projet où il fallait réaliser un jeu de Hex, plusieurs problèmes ont été vus (et n'ont pas eu le temps d'être résolus). <br /><br />
     Nous avons représentés le plateau de jeu par un tableau à double dimension. <br />
